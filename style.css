@@ -1,0 +1,276 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #0f172a;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+/* Container */
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Center Name */
+.hero-title h2{
+  font-family: Poppins;
+}
+
+.hero-title h2{
+  background: linear-gradient(90deg, #38bdf8, #a5f3fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Navigation */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+/*hero*/
+.hero {
+  height: 90vh;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
+  padding: 8%;
+}
+
+/* Dark overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  text-align: left;
+  color:  #F8FAFC;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*posts*/
+/* Section */
+.projects-section {
+  padding: 80px 5%;
+  background: #020617;
+}
+
+/* Section Heading */
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #38BDF8;
+  font-weight: 700;
+}
+
+/* Grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.post-card {
+  background: #111827;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Title */
+.post-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #F9FAFB;
+  padding: 15px;
+}
+
+/* Buttons */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* View */
+.view-btn {
+  background: #38BDF8;
+  color: #020617;
+}
+.view-btn:hover {
+  background: #7DD3FC;
+}
+
+/* Share */
+.share-btn {
+  background: #1F2937;
+  color: #E5E7EB;
+  border: 1px solid #374151;
+}
+.share-btn:hover {
+  background: #374151;
+}
+
+/*footer*/
+.site-footer {
+  background: #020617;
+  padding: 60px 5% 20px;
+  color: #9CA3AF;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.site-footer h3,
+.site-footer h4 {
+  color: #F9FAFB;
+  margin-bottom: 15px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-footer ul li {
+  margin-bottom: 8px;
+}
+
+.site-footer a {
+  color: #9CA3AF;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #38BDF8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #1F2937;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .hero {
+    height: 60vh;
+    padding: 5% 5%; /* reduce padding */
+    justify-content: center; /* center content horizontally */
+  }
+
+  .hero-content {
+    text-align: center; /* center text */
+    max-width: 100%; /* take full width */
+    padding: 15px; /* reduce inner padding */
+  }
+
+  .hero-content h1 {
+    font-size: 30px; /* smaller heading */
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 16px; /* smaller paragraph */
+    line-height: 1.5; /* slightly reduced line height */
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr; /* single column for tablets/mobile */
+    gap: 25px; /* reduce gap between sections */
+    text-align: center; /* center align text */
+  }
+
+  .site-footer h3,
+  .site-footer h4 {
+    margin-bottom: 10px; /* smaller margin */
+  }
+
+  .footer-bottom {
+    font-size: 13px; /* slightly smaller font */
+  }
+}
